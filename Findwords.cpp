@@ -61,5 +61,20 @@ int main() {
    string namaFile = "file.txt"; 
     char data[ROW][COL];
     bacadata(namaFile, data);
+    int n;
+    cin >> n;
+    vector<string> words(n);
+    for (int i = 0; i < n; i++) {
+        cin >> words[i];
+    }
+    
+
+    for (const auto &word : words) {
+        if (searchWord(grid, word))
+            cout <<word << " ada \n";
+        else
+            cout<< word << " tidak ada\n";
+    }
+
 return 0;
 }
